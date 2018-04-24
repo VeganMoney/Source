@@ -30,9 +30,9 @@ Algorithm Scypt
 PoW ends block 10 000
 Full PoS Reward system starts at Block 10 001
 
-Pre Mine 2 % 
-Pre Mine is to fund development , Exchange listings , additional PoS rewards
-25 % of the Pre Mine held by developers to be released in intervals over 12 months
+Pre Mine 2 % .
+Pre Mine is to fund development , Exchange listings , fund additional PoS rewards.
+25 % of the Pre Mine held by developers to be released in intervals over 12 months.
 
 Open your wallet, and make sure you are connected to another wallet. 
 You are connected when you see the icon Wallet Connections in the lower right corner of your wallet.
@@ -50,6 +50,9 @@ addnode=node.walletbuilders.com
 
 Download the latest version of cpuminer from here https://bitcointalk.org/index.php?topic=55038.0 and extract the zip file.
 
-Create a .bat file named mine.bat and paste the following text into mine.bat.
+Create a .bat file named mine.bat and paste one of the following text lines into mine.bat.
+Note most systems will allow 127.0.0.1 but some will not .
 
 minerd --url=http://127.0.0.1:36890 --userpass=rpcusername:rpcpassword
+minerd --url=http://localhost:36890 --userpass=rpcusername:rpcpassword
+minerd --url=http://externalip:36890 --userpass=rpcusername:rpcpassword
