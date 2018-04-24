@@ -1,32 +1,55 @@
 
 VeganMoney development tree
 
-VeganMoney is a PoS-based cryptocurrency.
+VeganMoney is a PoS-PoW , Merchant based cryptocurrency.
 
 Development process
 ===========================
 
-Developers work in their own trees, then submit pull requests when
-they think their feature or bug fix is ready.
+Coin development -- done
+PoS Reward System Phase 1 -- done
+PoW -- Done
+Pre mine for PoS Rewards  -- done
+Wallet -- done
+Daemon -- done
+Linux wallet -- done
 
-The patch will be accepted if there is broad consensus that it is a
-good thing.  Developers should expect to rework and resubmit patches
-if they don't match the project's coding conventions (see coding.txt)
-or are controversial.
+To Do;
 
-The master branch is regularly built and tested, but is not guaranteed
-to be completely stable. Tags are regularly created to indicate new
-stable release versions of VeganMoney.
+Roadmap
+Whitepaper
+Website
+Marketplace
+Webwallet
 
-Feature branches are created when there are major new features being
-worked on by several people.
+Mining Instructions :
 
-From time to time a pull request will become outdated. If this occurs, and
-the pull is no longer automatically mergeable; a comment on the pull will
-be used to issue a warning of closure. The pull will be closed 15 days
-after the warning if action is not taken by the author. Pull requests closed
-in this manner will have their corresponding issue labeled 'stagnant'.
+Block Reward 100
+Block Time    60 seconds
+Algorithm Scypt
+PoW ends block 10 000
+Full PoS Reward system starts at Block 10 001
 
-Issues with no commits will be given a similar warning, and closed after
-15 days from their last activity. Issues closed in this manner will be 
-labeled 'stale'.
+Pre Mine 2 % 
+Pre Mine is to fund development , Exchange listings , additional PoS rewards
+25 % of the Pre Mine held by developers to be released in intervals over 12 months
+
+Open your wallet, and make sure you are connected to another wallet. 
+You are connected when you see the icon Wallet Connections in the lower right corner of your wallet.
+Close your wallet and create the file veganmoney.conf in the folder "%APPDATA%\veganmoney\".
+
+Paste the following text into veganmoney.conf and save the file.
+
+rpcuser=new username here
+rpcpassword=new password
+rpcallowip=127.0.0.1
+rpcport=36890
+listen=1
+server=1
+addnode=node.walletbuilders.com
+
+Download the latest version of cpuminer from here https://bitcointalk.org/index.php?topic=55038.0 and extract the zip file.
+
+Create a .bat file named mine.bat and paste the following text into mine.bat.
+
+minerd --url=http://127.0.0.1:36890 --userpass=rpcusername:rpcpassword
